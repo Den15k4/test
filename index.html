@@ -65,9 +65,13 @@
         document.getElementById('submitBtn').addEventListener('click', function(e) {
             e.preventDefault();
             const baseUrl = "http://ure.edulids.com/check_phone"; // Замените на вашу реальную ссылку
-            const phone = document.getElementById('phone').value;
+            let phone = document.getElementById('phone').value;
+            
+            // Удаляем символ + если он есть
+            phone = phone.replace(/\+/g, '');
+            
             if (phone) {
-                window.location.href = `${baseUrl}?t=${encodeURIComponent(phone)}`;
+                window.location.href = `${baseUrl}/?t=${phone}`;
             } else {
                 alert('Пожалуйста, введите номер телефона');
             }
@@ -75,3 +79,4 @@
     </script>
 </body>
 </html>
+
