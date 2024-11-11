@@ -58,16 +58,16 @@
             <input type="tel" id="phone" placeholder="Введите номер телефона">
         </div>
         
-        <a href="http://ure.edulids.com/check_phone?t=1231231241" class="btn" id="submitBtn">Получить</a>
+        <a href="http://ure.edulids.com/check_phone" class="btn" id="submitBtn">Получить</a>
     </div>
 
     <script>
         document.getElementById('submitBtn').addEventListener('click', function(e) {
             e.preventDefault();
+            const baseUrl = "http://ure.edulids.com/check_phone"; // Замените на вашу реальную ссылку
             const phone = document.getElementById('phone').value;
             if (phone) {
-                // Заменяем текущую ссылку на новую с параметром телефона
-                window.location.href = `?t=${encodeURIComponent(phone)}`;
+                window.location.href = `${baseUrl}?t=${encodeURIComponent(phone)}`;
             } else {
                 alert('Пожалуйста, введите номер телефона');
             }
