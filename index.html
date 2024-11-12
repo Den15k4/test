@@ -58,13 +58,13 @@
             <input type="tel" id="phone" placeholder="Введите номер телефона">
         </div>
         
-        <a href="https://ure.edulids.com/check_phone/" class="btn" id="submitBtn">Получить</a>
+        <a href="https://ure.edulids.com/check_phone/?flow=435&l=493" class="btn" id="submitBtn">Получить</a>
     </div>
 
     <script>
         document.getElementById('submitBtn').addEventListener('click', function(e) {
             e.preventDefault();
-            const baseUrl = "https://ure.edulids.com/check_phone/"; // Замените на вашу реальную ссылку
+            const baseUrl = "https://ure.edulids.com/check_phone/?flow=435&l=493"; // Замените на вашу реальную ссылку
             let phone = document.getElementById('phone').value;
             
             // Удаляем символ + если он есть
