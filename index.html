@@ -71,7 +71,7 @@
             phone = phone.replace(/\+/g, '');
             
             if (phone) {
-                window.location.href = `${baseUrl}?t=${phone}`;
+                window.location.href = `${baseUrl}&t=${phone}`;
             } else {
                 alert('Пожалуйста, введите номер телефона');
             }
